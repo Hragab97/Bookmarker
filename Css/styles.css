@@ -1,0 +1,72 @@
+
+/* GLOBAL */
+
+:root {
+    --primary-color: #f7ecde;
+    --secondary-color: #fec260;
+    --h2primary-color: linear-gradient(430deg, #26d004 0%, #7bb800be 50%, #5a7a00 100%);
+    --h1primary-color: #000000;
+    --dottedprimary-color: #000000;
+    --darkmodeprimary-color: #000000;
+
+    .dark-theme {
+        --primary-color: #111111;
+        --secondary-color: #c02222;
+        --h2primary-color: linear-gradient(430deg, #ffffff 0%, #e6e6e6be 50%, #a9a9a9 100%);
+        --h1primary-color: #ffffff;
+        --dottedprimary-color: #c02222;
+        --darkmodeprimary-color: #ffffff;
+    }
+
+}
+
+/* BOOKMARK */
+
+#icon {
+    width: 30px;
+    cursor: pointer;
+    top: 5%;
+    right: 5%;
+}
+
+h1 {
+    color: var(--h1primary-color);
+    font-family: "Pacifico", cursive;
+    font-size: 50px;
+    display: inline-block;
+
+}
+
+
+h1::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    left: 0;
+    bottom: 10px;
+    background-color: var(--secondary-color);
+    transition: height 350ms;
+    z-index: -1;
+    transition: 0.5s ease;
+}
+
+h1:hover::before {
+    height: 50%;
+}
+
+.dotted-bg {
+    border-width: 2px 0 2px 0;
+    border-bottom-style: dotted;
+    border-color: var(--dottedprimary-color);
+}
+
+h2 {
+    background-image: var(--h2primary-color);
+    background-clip: text;
+    color: transparent;
+}
+
+body {
+    background-color: var(--primary-color);
+}

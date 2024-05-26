@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- META -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- TITLE -->
+    <title>Bookmarker</title>
+    <!-- ICON -->
+    <link rel="icon" href="./Assets/—Pngtree—bookmark icon vector illustration in_4246145.png">
+    <!-- STYLES -->
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="Css/all.min.css">
+    <link rel="stylesheet" href="Css/bootstrap.min.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="Css/fontawesome.min.css">
+    <!-- main -->
+    <link rel="stylesheet" href="Css/styles.css">
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container vh-100 p-5">
+        <img src="./Assets/dark theme icon/moon.png" id="icon" alt="dark mode icon" class="position-absolute">
+        <div class="row d-flex justify-content-center align-items-center text-center my-5">
+            <div class="col">
+                <h1 class="position-relative">Bookmarker</h1>
+                <div class="dotted-bg w-100 my-5"></div>
+                <h2><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i class="fa-solid fa-bookmark"></i></h2>
+            </div>
+        </div>
+        <form action="">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="siteName" name="siteName" placeholder="Site Name" oninput="Validation(this)" required>
+                <div class="alert alert-danger p-2 my-3 d-none">
+                    <small>Site name must start with Cap letter and small from 3 to 15 characters</small>
+                </div>
+                <label for="siteName"><i class="fa-solid fa-book-bookmark"></i> Site Name</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="url" class="form-control" id="siteUrl" name="siteUrl" placeholder="Site Url" oninput="Validation(this)"  required>
+                <div class="alert alert-danger p-2 my-3 d-none">
+                    <small>Invaild Site: please enter a valid URL</small>
+                </div>
+                <label for="siteUrl"><i class="fa-solid fa-link"></i> Site URL</label>
+            </div>
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col d-flex justify-content-center align-items-center gap-2">
+                    <button class="btn btn-outline-primary w-25" type="button" id="submitButton">Submit</button>
+                    <button class="btn btn-outline-info w-25 disabled" type="button" id="updateButton">Update</button>
+                </div>
+            </div>
+            <input type="text" class="form-control my-3 mx-auto shadow p-3" id="searchUrl" placeholder="Search by Name...">
+        </form>
+        <div class="dotted-bg w-100 my-5"></div>
+
+        <div class="row text-center p-1 my-5 d-flex justify-content-center align-items-center bg-light rounded-3">
+            <div class="col-3">
+                <h3 class="h6 fw-bold">Index</h3>
+            </div>
+            <div class="col-3">
+                <h3 class="h6 fw-bold">Website Name</h3>
+            </div>
+            <div class="col-3">
+                <h3 class="h6 fw-bold">Visit</h3>
+            </div>
+            <div class="col-3">
+                <h3 class="h6 fw-bold">Edit List</h3>
+            </div>
+            <hr>
+            <div class="row text-center my-2 d-flex justify-content-center align-items-center bg-light rounded-3" id="siteRow">
+            </div>
+        </div>
+
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <!-- bootstrap -->
+    <script src="Js/bootstrap.bundle.min.js"></script>
+    <!-- main -->
+    <script src="Js/main.js"></script>
+</body>
+
+</html>
